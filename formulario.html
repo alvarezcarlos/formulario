@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Recolección de datos</h1>
+    <form action="#">
+        <label for="nombre">Nombre</label>
+        <input name="nombre" id="nombre" type="text"><br><br>
+        <label for="rut">RUT</label>
+        <input name="rut" id="rut" type="text"><br><br>
+        <label for="cta">Cuenta Corriente</label>
+        <input name="cta" id="cta" type="checkbox"><br><br>
+        <input onclick="validar()" type="submit">
+    </form>
+<script>
+    
+    function validar (x, y) {
+        x = document.getElementById('nombre').value
+        y = document.getElementById('rut').value
+        if (x === '') {
+            alert('EL campo Nombre es mandatorio, favor completar');
+        }
+        if (isNaN(y)) {
+            alert('El campo RUT ingresado no es válido');
+        }
+
+    
+}
+</script>
+</body>
+</html>
